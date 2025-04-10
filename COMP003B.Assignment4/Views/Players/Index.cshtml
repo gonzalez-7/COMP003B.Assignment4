@@ -1,0 +1,29 @@
+﻿@model IEnumerable<COMP003B.Assignment4.Models.Player>
+
+@{
+    ViewData["Title"] = "Player List";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Favorite Game</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var player in Model)
+        {
+            <tr>
+                <td>@player.Name</td>
+                <td>@player.Age</td>
+                <td>@player.FavoriteGame</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-primary" asp-action="Create">Add New Player</a>

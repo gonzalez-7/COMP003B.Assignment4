@@ -1,0 +1,16 @@
+﻿@model COMP003B.Assignment4.Models.Game
+
+@{
+    ViewData["Title"] = "Game Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <strong>Name:</strong> @Model.Name<br />
+    <strong>Genre:</strong> @Model.Genre<br />
+    <strong>Difficulty:</strong> @Model.DifficultyLevel<br />
+    <strong>Publisher:</strong> @Model.Publisher<br />
+</div>
+
+<a asp-action="List">Back to List</a>

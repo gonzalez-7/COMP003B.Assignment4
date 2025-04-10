@@ -1,0 +1,13 @@
+﻿@model COMP003B.Assignment4.Models.Game
+
+<div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">
+            Genre: @Model.Genre <br />
+            Difficulty: @Model.DifficultyLevel <br />
+            Publisher: @Model.Publisher
+        </p>
+        <a asp-controller="Games" asp-action="Details" asp-route-id="@Model.GameId" class="btn btn-primary">Details</a>
+    </div>
+</div>

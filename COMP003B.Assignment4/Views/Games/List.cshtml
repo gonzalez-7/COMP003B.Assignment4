@@ -1,0 +1,14 @@
+﻿@model IEnumerable<COMP003B.Assignment4.Models.Game>
+
+@{
+    ViewData["Title"] = "List of Games";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@foreach (var game in Model)
+{
+    <partial name="_GameCard" model="game" />
+}
+
+<a class="btn btn-primary" asp-action="Create">Add New Game</a>
